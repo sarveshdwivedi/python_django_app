@@ -18,13 +18,4 @@ python manage.py migrate
 python manage.py createsuperuser
 
 
-> from customer.models import Choice, Question
->>> from django.utils import timezone
->>> q = Question(question_text="What's new?", pub_date=timezone.now())
->>> q.save()
->>> q = Question(question_text="What's up buddy?", pub_date=timezone.now())
->>> q.save()
->>> q = Question(question_text="What's up dude?", pub_date=timezone.now())
->>> q.save()
-
 
