@@ -7,7 +7,7 @@ mkdir pythonproject
 cd pythonproject
 ```
 
-#Install virtualend
+#Install virtualenv
 ```
 pip install virtualenv
 ```
@@ -29,7 +29,6 @@ pip install django
 #Start django project
 ```
 django-admin startproject MYSITE
-python manage.py runserver 5000
 ```
 
 #Start django project app
@@ -37,20 +36,11 @@ python manage.py runserver 5000
 python manage.py startapp customer
 ```
 
-#Migrate model
-```
-python manage.py makemigrations
-python manage.py migrate
-```
-
-#create super admin user
-```
-python manage.py createsuperuser
-```
 #Install PostgreSQL Package in Django
 ```
 pip install django psycopg2
 ```
+
 #PostgreSQl command for create DB, User and role
 #------------------------------
 ```
@@ -74,4 +64,20 @@ DATABASES = {
         'PORT': '',
     }
 }
+```
+
+#Create and Migrate model
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+#create super admin user
+```
+python manage.py createsuperuser
+```
+
+#Start Django App
+```
+python manage.py runserver 5000
 ```
