@@ -48,4 +48,13 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-
+#PostgreSQl Command
+#------------------------------
+```
+CREATE DATABASE agencies;
+CREATE USER django WITH PASSWORD 'password';
+ALTER ROLE django SET client_encoding TO 'utf8'; 
+ALTER ROLE django SET default_transaction_isolation TO 'read committed'; 
+ALTER ROLE django SET timezone TO 'Asia/Kolkata';
+GRANT ALL PRIVILEGES ON DATABASE agencies TO django;
+```
