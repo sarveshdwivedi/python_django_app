@@ -47,8 +47,11 @@ python manage.py migrate
 ```
 python manage.py createsuperuser
 ```
-
-#PostgreSQl Command
+#Install PostgreSQL Package in Django
+```
+pip install django psycopg2
+```
+#PostgreSQl command for create DB, User and role
 #------------------------------
 ```
 CREATE DATABASE agencies;
@@ -57,4 +60,18 @@ ALTER ROLE django SET client_encoding TO 'utf8';
 ALTER ROLE django SET default_transaction_isolation TO 'read committed'; 
 ALTER ROLE django SET timezone TO 'Asia/Kolkata';
 GRANT ALL PRIVILEGES ON DATABASE agencies TO django;
+```
+
+#Setting DB in Django setting.py
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sarvesh'
+        'USER': 'Password'
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 ```
